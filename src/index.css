@@ -1,0 +1,7 @@
+body{
+    background:#fafafa;
+    background-image: url(../src/Images/backGroundImage.png);
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+      }
