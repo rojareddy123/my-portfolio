@@ -1,129 +1,115 @@
 import Typography from "@material-ui/core/Typography";
-import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
- import MailOutlineIcon from '@material-ui/icons/MailOutline';
- import InsertDriveFileOutlinedIcon from '@material-ui/icons/InsertDriveFileOutlined';
- import MenuBookOutlinedIcon from '@material-ui/icons/MenuBookOutlined';
+
  import Button from '@material-ui/core/Button';
+ import GetAppIcon from '@material-ui/icons/GetApp';
  import SendIcon from '@material-ui/icons/Send';
  import {List,ListItem,ListItemText, ListItemIcon} from '@material-ui/core'
-import {
-    Link,
-  } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
-import Avatar from "@material-ui/core/Avatar";
-import Resume from '../components/Resume';
-import Portfolio from '../components/Portfolio';
-import Contact from '../components/Contact';
+import { NavLink } from 'react-router-dom';
+import Footer from '../components/Footer';
+import {HEADER_LIST} from '../utils/HeaderData'
 
 const useStyles = makeStyles((theme)=>({
+
   profile: {
     width: "100%",
+    borderRadius:'6px',
+    background:'white'
   },
-  profile_image:{
-    padding:'10px'
-  },
+
   profile_body:{
     margin:'20px',
   },
   button: {
-    margin: theme.spacing(1),
-  },
-  link:{
-    textDecoration:'none'
+    borderRadius:'50px',
+    backgroundColor:'#ffb100',
+    margin: `18px  30px`,
+    display: 'inline-flex',
+    '& .MuiButton-endIcon': {
+      backgroundColor: 'white',
+    borderRadius: '50%',
+    height: '30px',
+    width: '30px',
+    display: 'flex',
+    alignItems: 'center',
+    textAlign: 'center',
+    justifyContent: 'center',
+    }
   },
   profile_name:{
-    textAlign:'center'
+    textAlign:'center',
+    textTransform: 'uppercase',
+    padding:'20px',
+    fontWeight: 'bold'
+  },
+  sidebar_title:{
+    color:'black',
+  },
+  active: {
+     background: '#ffb100',
+     borderRadius:'30px'
+  },
+  'span.MuiButton-endIcon':{
+    backgroundColor: 'white',
+    borderRadius: '50%',
+    height: '30px',
+    width: '30px',
+    display: 'flex',
+    alignItems: 'center',
+    textAlign: 'center',
+    justifyContent: 'center',
   }
 }));
 
 
 const Header = () => {
-  const list = [
-    {
-    icon: <HomeOutlinedIcon />,
-    title:'Home',
-    path:'/',
-    componentName:<Resume/>
-  },
   
-  {
-    icon: <InsertDriveFileOutlinedIcon/>,
-    title:'Resume',
-    path:'/resume',
-    componentName:<Resume/>
-  },
-  
-  {
-    icon: <MenuBookOutlinedIcon/>,
-    title:'Portfolio',
-    path:'/portfolio',
-    componentName:<Portfolio/>
-
-  },
-  {
-    icon: <MailOutlineIcon/>,
-    title:'Contact',
-    path:'/contact',
-    componentName:<Contact/>
-
-  },
-  ]
   const classes = useStyles();
 
-  const text =  list.map((item,i) =>
-    <div key={i}>
-
-  <List key={i}>
-    <Link to={item.path} className={classes.link}>
-      <ListItem>
+  const text =  HEADER_LIST.map((item,i) =>
+  
+      <ListItem  component={NavLink} exact to={item.path} activeClassName={classes.active} key={`item-${i}`}>
         <ListItemIcon>
           {item.icon}
         </ListItemIcon>
-        <ListItemText >{item.title}</ListItemText>
+        <ListItemText className={classes.sidebar_title}>{item.title}</ListItemText>
       </ListItem>
-      </Link>
-    </List>
-     </div>
+   
   )
   return (
-      <div >
+      <div className="container_shadow">
       <div className={classes.profile} >
       <div className={classes.profile_header} >
-        <figure className={classes.profile_image}>
-          <Avatar
-            alt="my profile"
-            src="https://wallpapercave.com/wp/wp9428384.jpg"
-          
-          ></Avatar>
+         
           <div className={classes.profile_name}>
             <Typography variant="h6" component="h2">
             Roja Reddy
             </Typography>
-            <Typography variant="h6" component="h6">
-           Full Stack Developer
+            <Typography variant="body2" component="body2">
+            Full Stack Developer
             </Typography>
           </div>
-        </figure>
-        <div></div>
+      
+        <div><Footer></Footer></div>
       </div>
       <div className={classes.profile_body}>
-       {text}    
+        <List>
+       {text} 
+       </List>   
       </div>
     
-    <div className="Download_Resume" style={{display:'inline-flex'}}>
+    <div className="Download_Resume">
     <Button
         variant="contained"
-        color="primary"
         className={classes.button}
-        endIcon={<SendIcon/>}
+        endIcon={<GetAppIcon/>}
       >
-        Download Resume
+        Download cv
       </Button>
-    {/* </div>
-    <div className="Hire_me"> */}
+     </div>
+    <div className="Hire_me"> 
     <Button
         variant="contained"
-        color="primary"
         className={classes.button}
         endIcon={<SendIcon/>}
       >
@@ -131,8 +117,9 @@ const Header = () => {
       </Button>
 
     </div>
+    
     </div>
-
+    
       </div>
   );
 };
