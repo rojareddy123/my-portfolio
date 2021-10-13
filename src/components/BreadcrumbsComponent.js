@@ -7,7 +7,7 @@ function handleClick(event) {
   }
 const BreadcrumbsComponent =(props)=>{
 return (
-    <div role="presentation" onClick={handleClick}>
+    <div role="presentation" onClick={handleClick} style={{padding: '20px'}}>
     <Breadcrumbs aria-label="breadcrumb">
       <Link underline="hover" color="inherit" href="/">
         Home

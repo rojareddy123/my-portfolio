@@ -14,11 +14,12 @@ const useStyles= makeStyles(()=>({
     customTimeLineItemContent:{
         padding:'0px 10px'
     },
-    customTimeLineItemSeperator:{
+    customTimeLineItemSeperator:{                                                                                                                                
         '& .MuiTimelineDot-defaultGrey':{
             color: '#ffb100',
             borderColor:'inherit',
-            backgroundColor:'inherit'
+            backgroundColor:'inherit',
+            padding: '2px'
         }
        
     }
@@ -26,12 +27,14 @@ const useStyles= makeStyles(()=>({
 const TimeLineComponent = ({item})=>{
     const classes = useStyles();
 return (
+    <div className={classes.customTimeLine}>
 <TimelineItem className={classes.customTimeLineItem}>
   <TimelineSeparator className={classes.customTimeLineItemSeperator}>
     <TimelineDot />
   </TimelineSeparator>
   <TimelineContent className={classes.customTimeLineItemContent}>{item}</TimelineContent>
 </TimelineItem>
+</div>
 )
 }
 

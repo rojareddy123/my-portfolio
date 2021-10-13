@@ -1,7 +1,12 @@
 body{
     background:#fafafa;
     background-image: url(../src/Images/backGroundImage.png);
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     overflow-x: hidden;
     position: relative;
+    font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    -webkit-font-smoothing: antialiased;
+      }
+      code{
+        font-family: source-code-pro, Menlo, Monaco, Consolas,'Courier New';
       }

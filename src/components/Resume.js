@@ -5,14 +5,12 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import AboutMe from "./AboutMe";
 import Divider from '@material-ui/core/Divider';
-import Skills from './Skills';
 const useStyles= makeStyles(()=>({
 title:{
   textDecoration: 'underline',
   textDecorationColor:'#ffb100',
   textDecorationThickness:'7px',
-  marginLeft:'20px',
-  marginTop:'20px'
+  margin:'24px 30px',
 }
 }))
 const Resume = () => {
@@ -23,11 +21,6 @@ const Resume = () => {
     </Grid>
   ));
 
-  // let skills = SKILLS.map((item, i) =>
-  // <Grid item md={4} key={`skillitem-${i}`}>
-  //     <CardComponent data={item} m={2}/>
-  //   </Grid>
-  // )
   return (
     <div>
       <AboutMe/>
@@ -44,20 +37,6 @@ const Resume = () => {
       </Grid>
 
         </section>
-      {/* <section>
-
-      <Typography
-        className={classes.title}
-        variant={"h5"}
-      
-      >
-        Skills
-      </Typography> 
-   <Grid container spacing={4}>
-       {skills}
-      </Grid>
-        </section> */}
-      {/* <Skills/> */}
     
     </div>
   );

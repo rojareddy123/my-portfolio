@@ -9,24 +9,16 @@ import Contact from '../components/Contact';
 export const HEADER_LIST = [
     {
     icon: <HomeOutlinedIcon />,
-    title:'Home',
+    title:'About',
     path:'/',
     componentName:<Home/>
   },
   
   {
     icon: <InsertDriveFileOutlinedIcon/>,
-    title:'Resume',
-    path:'/resume',
+    title:'Experience',
+    path:'/experience',
     componentName:<Resume/>
-  },
-  
-  {
-    icon: <MenuBookOutlinedIcon/>,
-    title:'Portfolio',
-    path:'/portfolio',
-     componentName:<Portfolio/>
-
   },
   {
     icon: <MailOutlineIcon/>,

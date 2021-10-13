@@ -1,11 +1,14 @@
+import FacebookIcon from '@material-ui/icons/Facebook';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import InstagramIcon from '@material-ui/icons/Instagram';
+
 export const  WORK_EXPERIENCE = [
   {
     title: "Principal Group Services",
     duration: "February 2018 - Present",
     role: "Full Stack Developer",
-    description:
-      ["Worked on several projects related to trading platforms.",
-      "Implemented several features like dashboard development, risk tolerance, asset allocation, user profile, client and advisor directed onboarding"],
+    description:"Worked on several projects related to trading platforms.Implemented several features like dashboard development, risk tolerance, asset allocation, user profile, client and advisor directed onboarding",
     responsibilites: ['Gather Complex Requirements from Business Stakeholders and convert them to Technical needs that do not deter Performance to Development and Security needs.',
     'Worked with Product Owners to understand workflow processes and translate designs to prototypes.',
     'Interacted with the designers to suggest changes and make sure the prototypes are translated into interactive, dynamic, and functional code: used invision, Figma , and collaborated with designers.',
@@ -26,8 +29,7 @@ export const  WORK_EXPERIENCE = [
     title: "GE Health Care",
     duration: "September 2017 - December 2017",
     role: "Application Developer",
-    description:
-      ["Designed and Developed the entire Web Application from scratch.","Developed most of the modules like User Management, Video Management, Calendar, Notifications."],
+    description:"Designed and Developed the entire Web Application from scratch.Developed most of the modules like User Management, Video Management, Calendar, Notifications.",
     responsibilites: ['Gather Complex Requirements from Business Stakeholders and convert them to Technical needs that do not deter Performance to Development and Security needs.',
     'Developed single page application using React.js utilizing TypeScript, ES6.',
     'Extensively used React-Hooks to perform the application life cycle process.',
@@ -46,9 +48,8 @@ export const  WORK_EXPERIENCE = [
     title: "Santander Consumer USA",
     duration: "January 2017 - August 2017",
     role: "Software Developer",
-     description:
-    ["Designed and Developed the entire Web Application from scratch.","Developed most of the modules like User Management, Video Management, Calendar, Notifications."],
-  responsibilites: ['Contribute to all phases of the development lifecycle: gather requirements, application development, create algorithms, program, test, validate, verify, and configure.Understanding of the architecture, systems development life cycle management, version control, application maintenance, and support techniques, bug/issue tracking.',
+     description:"Designed and Developed the entire Web Application from scratch.Developed most of the modules like User Management, Video Management, Calendar, Notifications.",
+     responsibilites: ['Contribute to all phases of the development lifecycle: gather requirements, application development, create algorithms, program, test, validate, verify, and configure.Understanding of the architecture, systems development life cycle management, version control, application maintenance, and support techniques, bug/issue tracking.',
     'Ensured availability and security for the database in a production environment.',
     'Received business logic specifications and design documents, and translated them into HTML5, CSS3 preprocessor styling LESS, JSON files, JavaScript, React.',
     'Worked on optimizing performance of application both on front end and backend.',
@@ -61,9 +62,8 @@ export const  WORK_EXPERIENCE = [
     title: "Vitality Health Insurance",
     duration: "January 2013 - January 2015",
     role: "Software Developer",
-    description:
-      ["Designed and Developed the entire Web Application from scratch.","Developed most of the modules like User Management, Video Management, Calendar, Notifications."],
-   responsibilites: ['Contribute to all phases of the development lifecycle: gather requirements, application development, create algorithms, program, test, validate, verify, and configure.',
+    description:"Designed and Developed the entire Web Application from scratch.Developed most of the modules like User Management, Video Management, Calendar, Notifications.",
+    responsibilites: ['Contribute to all phases of the development lifecycle: gather requirements, application development, create algorithms, program, test, validate, verify, and configure.',
     'Implemented CSS throughout the site, both as in-line and imported files.',
     'Developed page layouts, navigation, buttons, and icons using Bootstrap.',
     'Implemented Object-Oriented JavaScript throughout the site.Applied HTML, CSS, and JavaScript to create a cross-browser-friendly responsive design compatible with desktop and mobile browsers.',
@@ -75,8 +75,8 @@ export const  WORK_EXPERIENCE = [
   },
 ];
 
-export const ABOUT={description: `Roja has over 6+ years of experience working closely with business end-users in Web Development as an Analyst, Developer, and Tester. Roja can maintain and build new applications in the best possible way. Roja is involved in the complete project life cycle right from the requirement gathering phase to end product delivery, including converting business needs to technical needs, prototype, development, unit testing, debug, deployment process, End-user support. Roja is experienced and proficient in various technologies like HTML, CSS, Bootstrap, JavaScript, Vue.js, Es6, React.js,  Node.js, PHP, AWS, Typescript and strong background in Object-Oriented Programming. Highly motivated, hard worker, self-starter & quick learner with a proven track record of seeking complex challenges, applying new technologies, and generating consistently superior outcomes. `}
-
+export const ABOUT=
+{description: 'I have over 7+ years of experience working closely with business end-users in Web Development as an Analyst, Developer, and Tester. I can maintain and build new applications in the best possible way. I have been involved in the complete project life cycle right from the requirement gathering phase to end product delivery, including converting business needs to technical needs, prototype, development, unit testing, debugging, deployment process. \n\nFast-forward to today, and I’ve had the privilege of working at start-up and  huge corporation. My main focus these days is building accessible, inclusive products and digital experiences.\n\n I have experienced and proficient in various technologies like HTML, CSS, Bootstrap, JavaScript, Vue.js, Es6, React.js,  Node.js, PHP, AWS, Typescript and strong background in Object-Oriented Programming. \n\n Highly motivated, hard worker, self-starter & quick learner with a proven track record of seeking complex challenges, applying new technologies, and generating consistently superior outcomes. '}
 export const SKILLS= [{
   title:'BackEnd',
   description:['JAVA', 'PHP','Laravel'],
@@ -89,4 +89,23 @@ export const SKILLS= [{
   title:'DataBase',
   description:['MySql', 'Oracle'],
 },
-]
+];
+
+export const SOCIALMEDIADATA=[{
+  facebook:{
+    link:'https://www.linkedin.com/in/roja-reddy-2a4012142/#',
+    icon: <FacebookIcon />
+  },
+  linkedIn:{
+    link:'https://www.linkedin.com/in/roja-reddy-2a4012142/#',
+    icon: <LinkedInIcon />
+  },
+  twitter:{
+    link:'https://www.linkedin.com/in/roja-reddy-2a4012142/#',
+    icon: <TwitterIcon />
+  },
+  InstaGram:{
+    link:'https://www.linkedin.com/in/roja-reddy-2a4012142/#',
+    icon: <InstagramIcon />
+  },
+}];

@@ -18,7 +18,8 @@ import Timeline from '@material-ui/lab/Timeline';
 const useStyles = makeStyles(() => ({
   card: {
     
-    // height: 500,
+    height: '100%',
+    minHeight:'190px',
     margin: "20px",
     transition: "0.3s",
     // margin: 16,
@@ -32,12 +33,17 @@ const useStyles = makeStyles(() => ({
   },
   cardContent: {
     lineHeight: "28px",
-    // height:'300px'
+    // height:'300px',
+    '& .MuiTimeline-root ':{
+      padding :'6px'
+    }
   },
   cardTitle: {
-    paddingLeft:'16px',
-    fontWeight:'bold'
-
+    padding:'0px 16px',
+    fontWeight:'bold',
+// '& .MuiTypography-body1':{
+//   fontFamily:"Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+// }
   },
   card_icon:{
     width: '40px',
@@ -69,11 +75,11 @@ const CardComponent = (props) => {
 
 <TimeLineComponent item={item} key={`timeline-${i}`}/>
 )
-  const timeLineComponent = props.data.description && props.data.description.map((item, i)=>
+//   const timeLineComponent = props.data.description && props.data.description.map((item, i)=>
 
-<TimeLineComponent item={item} key={`timelines-${i}`}/>
+// <TimeLineComponent item={item} key={`timelines-${i}`}/>
 
-)
+// )
   const [expanded, setExpanded] = useState(false);
 
   const handleExpandClick = () => {
@@ -93,10 +99,14 @@ const CardComponent = (props) => {
             {props.data.role}
           </Typography>
         <CardContent className={classes.cardContent}>
-        <Timeline >
-            {timeLineComponent}
-         </Timeline>
+        {/* <Timeline > */}
+            
+            <Typography style={{padding:'0px 16px'}}  variant={"body1"}>
+            {props.data.description }
+          </Typography>
+         {/* </Timeline> */}
         </CardContent>
+      
       {(props.data.responsibilites) && <CardActions disableSpacing>
         <ExpandMore
           expand={expanded}
