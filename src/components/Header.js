@@ -2,11 +2,12 @@ import Typography from "@material-ui/core/Typography";
 
  import Button from '@material-ui/core/Button';
  import GetAppIcon from '@material-ui/icons/GetApp';
- import SendIcon from '@material-ui/icons/Send';
+
  import {List,ListItem,ListItemText, ListItemIcon} from '@material-ui/core'
 import { makeStyles } from "@material-ui/core/styles";
 import { NavLink } from 'react-router-dom';
-import Footer from '../components/Footer';
+import SocialMedia from './SocialMedia';
+import TelegramIcon from '@material-ui/icons/Telegram';
 import {HEADER_LIST} from '../utils/HeaderData'
 
 const useStyles = makeStyles((theme)=>({
@@ -16,7 +17,9 @@ const useStyles = makeStyles((theme)=>({
     borderRadius:'6px',
     background:'white'
   },
-
+  profile_header:{
+    margin:'20px'
+  },
   profile_body:{
     margin:'20px',
   },
@@ -58,6 +61,9 @@ const useStyles = makeStyles((theme)=>({
     alignItems: 'center',
     textAlign: 'center',
     justifyContent: 'center',
+  },
+  profile_role:{
+    textAlign: 'center'
   }
 }));
 
@@ -81,17 +87,18 @@ const Header = () => {
       <div className={classes.profile} >
       <div className={classes.profile_header} >
          
-          <div className={classes.profile_name}>
-            <Typography variant="h6" component="h2">
+          <div >
+            <Typography variant="h6" component="h2" className={classes.profile_name}>
             Roja Reddy
             </Typography>
-            <Typography variant="body2" component="body2">
+            <Typography  component='h6' className={classes.profile_role}>
             Full Stack Developer
             </Typography>
           </div>
       
-        <div><Footer></Footer></div>
+        
       </div>
+      <div><SocialMedia></SocialMedia></div>
       <div className={classes.profile_body}>
         <List>
        {text} 
@@ -111,7 +118,7 @@ const Header = () => {
     <Button
         variant="contained"
         className={classes.button}
-        endIcon={<SendIcon/>}
+        endIcon={<TelegramIcon/>}
       >
          Hire Me
       </Button>

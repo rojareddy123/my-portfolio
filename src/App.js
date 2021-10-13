@@ -1,9 +1,9 @@
 import Header from './components/Header'
-import Typography from "@material-ui/core/Typography";
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import BreadcrumbsComponent from './components/BreadcrumbsComponent';
-
+import { createTheme  } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
 import {HEADER_LIST} from './utils/HeaderData'
 import {
   BrowserRouter as Router,
@@ -11,13 +11,32 @@ import {
   Route,
 } from "react-router-dom";
 import { makeStyles } from '@material-ui/core';
-
+const theme = createTheme ({
+  typography: {
+    fontFamily: [
+      'Calibre',
+      'Inter',
+      'San Francisco',
+      'SF Pro Text',
+      'sans-serif'
+    ].join(','),
+  }
+});
 const useClass = makeStyles(()=>({
   content: {
     width: "100%",
     borderRadius:'6px',
-    background:'white'
-  }
+    background:'white',
+    marginTop: '20px'
+  },
+
+  App_Wrapper:{
+    display:'flex',
+    marginTop:'60px',
+'@media (max-width: 400px)':{
+    display:'block'
+      }
+}
 }));
 
 function App() {
@@ -36,10 +55,12 @@ function App() {
   
   
   return (
+    <ThemeProvider theme={theme}>
     <div>
-        <Container style={{display:'flex', marginTop:'60px'}}>
+      
+        <Container  className={classes.App_Wrapper}>
         <Router >
-          <Grid item xs={12} md={6} lg={3}>
+          <Grid item xs={12} md={6} lg={3} style={{paddingBottom:'50px'}}>
         <Header />
     
      </Grid>
@@ -51,6 +72,7 @@ function App() {
      </Container>
    
     </div>
+    </ThemeProvider>
   );
 }
 

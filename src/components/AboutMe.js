@@ -12,7 +12,6 @@ title:{
   textDecoration: 'underline',
   textDecorationColor:'#ffb100',
   textDecorationThickness:'7px',
-  marginLeft:'20px'
 },
 aboutme_icons:{
     width: '40px',
@@ -28,7 +27,14 @@ aboutme_icons:{
 },
 details_info:{
     paddingLeft:'30px',
-    
+     color:'darkslategrey'
+},
+
+AboutMe_Grid:{
+    display:'flex',
+'@media (max-width: 600px)':{
+    display:'block'
+      }
 }
 })) 
 
@@ -36,31 +42,31 @@ const AboutMe=()=>{
     const classes = useStyles()
     return (
         <section>
+            <Container>
               <Typography
         className={classes.title}
         variant={"h5"}
-        style={{marginLeft:'20px'}}
       >
         About Me
       </Typography>
+     
       <Typography
-      style={{padding:'20px'}}
         variant={"body1"}
-      >
+      style={{marginTop:'30px', color:'darkslategrey',  whiteSpace: 'pre-line'}}
+      >  
         {ABOUT.description}
       </Typography>
-
-<Container>
-<Grid style={{display:'flex'}}>
+<Grid>
+<Grid item xs={12}    className={classes.AboutMe_Grid}>
     <div style={{display:'flex', padding:'30px'}}>
     <div className={classes.aboutme_icons}>
     <WorkOutlineOutlinedIcon  />
         </div>
 <div className={classes.details_info}>
 <Typography
-        variant={"body1"}
+        variant={"body1"} 
       >
-        6+ years Job
+        7+ years Job
       </Typography>
       <Typography
         variant={"caption"}
@@ -106,6 +112,7 @@ const AboutMe=()=>{
               
           </div>
     </div>
+    </Grid>
 </Grid>
     </Container>
    
